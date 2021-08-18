@@ -1,0 +1,100 @@
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+p,td {
+    font-family: Muli, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.error {
+    color: rgb(207, 85, 85)
+}
+
+.formSesion {
+    margin-top: 15vh;
+}
+
+.color-primary {
+    background-color: #fd7e14;
+}
+.text-color {
+    color: #fd7e14;
+}
+
+/* nav ------------------------ */
+.nav-link {
+    display: inline-block;
+}
+.navbar-brand {
+    display: flex;
+}
+.navbar-brand img {
+    text-align: center;
+    width: 50px;
+}
+.navbar-brand span {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.carousel-item img {
+    width: 500px;
+    height: 330px;
+}
+
+.max-width {
+    max-width: 65%;
+}
+
+
+/* media queries ------------------- */
+@media (max-width:420px)  {
+    .max-width {
+        max-width: 100%;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 21px;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+@media (min-width:420px) and (max-width:1200px) {
+    .max-width {
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+
+/* Canciones ---------------- */
+.icono {
+    width: 70px;
+}
+
+input[type^='search'] {
+   background-color: rgb(219, 211, 200);
+}
+
+
+
