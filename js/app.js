@@ -41,7 +41,7 @@ $(document).ready(function () {
                     `
         }
         // tomamos el elemento list y le asignamos el html 
-        document.getElementById('list').innerHTML = html      
+        document.getElementById('list-top3').innerHTML = html      
     })
 })
 
