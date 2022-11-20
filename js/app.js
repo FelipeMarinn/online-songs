@@ -35,7 +35,7 @@ $(document).ready(function () {
                      <tr>
                        <td>${top3[i].nombre}</td>
                        <td>
-                         <audio src="../assets/canciones/${top3[i].ruta}" controls></audio>
+                         <audio src="/assets/canciones/${top3[i].ruta}" controls></audio>
                        </td>
                      </tr>
                     `
