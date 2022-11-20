@@ -34,12 +34,12 @@ $(document).ready(function () {
         // creamos el siguiente html por cada elemento del array 
         for (var i = 0; i < top3.length; i++) {
             html += `
-                     <tr id=${top3[i].nombre} key=${top3[i].nombre}>
-                       <td>${top3[i].nombre}</td>
-                       <td>
+                     <div id=${top3[i].nombre} key=${top3[i].nombre}>
+                       <h3>${top3[i].nombre}</h3>
+                       <span>
                          <audio src="../assets/canciones/${top3[i].ruta}" controls></audio>
-                       </td>
-                     </tr>
+                       </span>
+                     </div>
                     `
         }
         // tomamos el elemento list y le asignamos el html 
