@@ -1,51 +1,3 @@
-
-var listCanciones
-var top3 = []
-
-// Top 3 canciones ----------------------
-$(document).ready(function () {
-
-    $.ajax({
-        url: '../datos.json'
-    }).done(function (datos) {
-
-        // guardamos los datos en la variable listCanciones
-        listCanciones = datos.canciones
-       
-        // ordenamos las canciones de mayor a menor 
-        listCanciones.sort((a,b) => {
-            if (a.reproducciones > b.reproducciones) {
-                return -1
-            }
-             if (a.reproducciones < b.reproducciones) {
-                return 1
-            }
-            return 0
-        })
-       
-        // tomamos los 3 primero elemetos del array 
-        for (var i = 0; i < 3; i++) {       
-              top3.push(listCanciones[i])
-        }
-       
-        var html = ''
-        // creamos el siguiente html por cada elemento del array 
-        for (var i = 0; i < top3.length; i++) {
-            html += `
-                     <tr>
-                       <td>${top3[i].nombre}</td>
-                       <td>
-                         <audio src="/assets/canciones/${top3[i].ruta}" controls></audio>
-                       </td>
-                     </tr>
-                    `
-        }
-        // tomamos el elemento list y le asignamos el html 
-        document.getElementById('list-top3').innerHTML = html      
-    })
-})
-
-
 var allSongs 
 
 // Todas las canciones -------------------------
@@ -62,7 +14,7 @@ $(document).ready(function() {
           
             cardMusic +=
                `
-                <div class='cardItem col-12 col-md-6 col-lg-4 p-0 '>
+                <div class='cardItem col-12 col-md-6 col-lg-4 p-0 ' key=${allSongs[i].nombre}>
                   <div class="card m-1 text-center">
                     <div class="card-header">
                       <img class='icono' src='../assets/imagenes/icon_${allSongs[i].icono}.svg'/>
@@ -107,7 +59,3 @@ function buscarCanciones() {
         }
      } 
 }
-
-
-
-
